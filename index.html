@@ -13,52 +13,103 @@
             padding: 0;
         }
 
-        header {
-            background-color: #008080;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
+        nav {
+            background-color: #ffffff33;
+            color: #000000;
+            text-align: right;
+            padding: 0.5em;
+             /* Añade posición fija y fija la barra en la parte superior */
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Asegura que la barra esté en la parte superior de otros elementos */
+            transition: background-color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
         }
 
-        nav {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 0.5em;
+
+        /* Barra de navegación transparente cuando no está en la parte superior */
+        nav:not(.solid) {
+            background-color: #ffffff;
         }
+
+
+        /* Añade margen superior al contenido para evitar que se superponga con la barra de navegación */
+        section {
+            background-color: #ffffff;
+            padding-top: 60px; /* Ajusta según el tamaño de tu barra de navegación */
+        }
+
 
         nav a {
-            color: #fff;
+            color: #080808;
             text-decoration: none;
             padding: 1em;
         }
 
-        section {
-            padding: 20px;
+        #inicio {
+            background-color: #008080;
+            /* Agrega bordes */
+            text-shadow: -1px -1px 0 #000,  
+                  1px -1px 0 #000,
+                 -1px  1px 0 #000,
+                  1px  1px 0 #000;
+                  /* Otras propiedades del texto*/
+            text-align: left;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: x-large;
+            font-style: oblique;
+            padding: 150px;
+
+                /* Propiedades para la imagen de fondo */
+            background-image: url('https://images.unsplash.com/photo-1581544291234-31340be4b1b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            
+
+        }
+        #recursos {
+            padding: 50px;
+            background-color: #D7A9C3;
+        }
+
+        #juegos {
+            padding: 50px;
+            background-color: #d1ffec;
+        }
+
+        #informacion {
+            padding: 50px;
+            background-color: #cfc9ae;
+        }
+
+        #pruebas {
+            padding: 50px;
+            background-color: #99b7cb;
         }
 
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 1em;
-            position: fixed;
+            padding: 5px;
             bottom: 0;
             width: 100%;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Página para Estudiantes con Dislexia</h1>
-    </header>
-
     <nav>
         <a href="#recursos">Recursos Educativos</a>
         <a href="#juegos">Juegos Educativos</a>
         <a href="#informacion">Información y Consejos</a>
         <a href="#pruebas">Pruebas y Evaluaciones</a>
     </nav>
+
+    <section id="inicio">
+       <h1>Letras Sin Fronteras</h1>
+       <h1> Libérate de las Letras: Donde Aprender es un Viaje Personalizado </h1>
+    </section>
 
     <section id="recursos">
         <h2>Recursos Educativos</h2>
