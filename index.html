@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página para Estudiantes con Dislexia</title>
+    <title>Dislexia</title>
      
     <style>   
 
@@ -13,6 +13,7 @@
             color: #333;
             margin: 0;
             padding: 0;
+            width: 100%;
         }
 
         nav {
@@ -38,7 +39,7 @@
         /* Añade margen superior al contenido para evitar que se superponga con la barra de navegación */
         section {
             background-color: #ffffff;
-            padding-top: 60px; /* Ajusta según el tamaño de tu barra de navegación */
+            padding-top: 10px; /* Ajusta según el tamaño de tu barra de navegación */
         }
 
 
@@ -60,7 +61,7 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-size: larger;
             font-style: oblique;
-            padding: 150px;
+            padding: 130px;
 
                 /* Propiedades para la imagen de fondo */
             background-image: url('https://images.unsplash.com/photo-1581544291234-31340be4b1b8?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -70,12 +71,16 @@
             
 
         }
+        
+        #inicio h1{
+            font-size: xx-large;
+        }
 
 
         #concepto{
             font-family: 'Arial', sans-serif;
             font-size: small;
-            padding: 100px;
+            padding-bottom: 100px;
             background-color: #ffffff;
         }
 
@@ -101,31 +106,46 @@
             justify-content: left;
             padding: 0;
             margin: 0%;
+            width: 100%;
             
         }
 
         .elemento1 {
             width: 910px; /* Puedes ajustar el ancho según tus necesidades */
             height: 1500px; /* Puedes ajustar la altura según tus necesidades */
-            background-color: #b5c9c9ab; /* Puedes ajustar el color de fondo según tus necesidades */
+            background-color: #b5c9c93a; /* Puedes ajustar el color de fondo según tus necesidades */
             margin: 2px; /* Añade márgenes según tus necesidades */
             padding: 1%;
             
+            
+        }
+        
+        .elemento1 ol{
+            font-size: large;
         }
 
         .elemento2 {
             width: 420px; /* Puedes ajustar el ancho según tus necesidades */
-            height: 1000px; /* Puedes ajustar la altura según tus necesidades */
-            background-color: #b5c9c9ab; /* Puedes ajustar el color de fondo según tus necesidades */
-            margin: 2px; /* Añade márgenes según tus necesidades */
+            height: 900px; /* Puedes ajustar la altura según tus necesidades */
+            background-color: #b5c9c93a; /* Puedes ajustar el color de fondo según tus necesidades */
+            margin: 1px; /* Añade márgenes según tus necesidades */
             padding: 1%;
+            align-content: center;
             
         }
 
         .elemento2 ul {
             list-style-type: none;
-            padding: 0;
-            margin: 0;
+            padding: 0%;
+            
+            align-items: center;
+        }
+
+        .elemento2 li {
+            padding-top: 10px;
+        }
+        .elemento2 iframe{
+            padding: 5px;
         }
         #recursos {
             font-family: 'Arial', sans-serif;
@@ -179,23 +199,19 @@
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 5px;
+            padding-top: 5px;
             bottom: 0;
             width: 100%;
         }
-        ul {
+        .footer ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-        li {
+        .footer li {
             display: inline;
             margin-right: 10px;
         }
-        li a{
-            text-align: right;
-        }
-
 
     </style>
 </head>
@@ -211,14 +227,16 @@
 
 
     <section id="inicio">
-       <h1>Letras Sin Fronteras</h1>
-       <h3> Libérate de las Letras: Donde Aprender es un Viaje Personalizado </h3>
+       <h1>Dislexia</h1>
+       <h3> ¡Cambiando el Mundo, una Palabra a la Vez! </h3>
     </section>
 
 
     <section id="concepto">
         <div class="contenedor">
             <div class="elemento1">
+
+                <h1>Dislexia</h1>
                 <p>
                     La dislexia viene definida por el Manual Diagnóstico y Estadístico de los Trastornos Mentales (DSM, en su versión 5) como un trastorno específico del aprendizaje incluido dentro de la categoría de trastornos del neurodesarrollo.
         
@@ -236,7 +254,7 @@
                     Los principales síntomas de las dislexia son los siguientes, aunque conviene aclarar que cada caso es único y aunque exista una sintomatología general las diferencias individuales determinaran no solo el grado de cada uno de estos síntomas sino incluso su presencia o no en el cuadro de un individuo.
                 </p>
 
-                <ul>
+                <ol>
                     <li>Pueden aparecer problemas en la lateralidad.</li>
                     <li>Las nociones temporales y espaciales pueden estar alteradas.</li>
                     <li>Confusión de palabras que presentan una pronunciación similar.</li>
@@ -246,7 +264,7 @@
                     <li>Problemas de concentración durante la lectura o la escritura.</li>
                     <li>Dificultades para aprender rutinas y seguir instrucciones.</li>
                     
-                </ul>
+                </ol>
 
                 <h1> Señales de la Dislexia </h1>
 
@@ -263,39 +281,40 @@
                 
                 </p>
                 <h2>Edad Preescolar</h2>
-                <ul>
+                <ol>
                     <li>Existen dificultades para reconocer si dos palabras riman entre sí. </li>
                     <li>Les resulta difícil eliminar el sonido inicial de una palabra. </li>
                     <li>Existe dificultad para aprender palabras nuevas.</li>
                     <li>Dificultad para reconocer las letras y asociarlas de forma adecuada con su sonido.</li> 
-                </ul> 
+                </ol> 
                 <h2>Primaria</h2>
-                <ul>
+                <ol>
                     <li>Existen dificultades para eliminar el sonido medio dentro de una palabra. </li>
                     <li>Dificultades al mezclar sonido para crear una palabra. </li>
                     <li>Es frecuente que no reconozcan palabras que les son familiares a simple vista..</li>
                     <li>Olvidan la escritura de palabras que ya han aprendido.</li> 
                     <li>Presentan muchas dificultades para resolver problemas matemáticos.</li> 
-                </ul> 
+                </ol> 
                 <h2>Secundaria y bachillerato</h2>
-                <ul>
+                <ol>
                     <li>Se produce la omisión de palabras en la lectura en voz alta. </li>
                     <li>Presencia de abundantes faltas de ortografía. </li>
                     <li>De forma frecuente tienen que volver a releer lo anteriormente leído.</li>
                     <li>Su nivel de lectura es inferior a su nivel académico</li> 
                     <li>Prefieren las preguntas tipo test a las de respuesta libre o de desarrollo.</li> 
-                </ul> 
+                </ol> 
             </div>
 
 
             
             <div class="elemento2">
                 <ul>
-                    <iframe width="400" height="315" src="https://www.youtube.com/embed/u9QJYweVceY" frameborder="0" allowfullscreen></iframe>
-                    <iframe width="400" height="315" src="https://www.youtube.com/embed/MCH8QrJ3pSI" frameborder="0" allowfullscreen></iframe>
-                    <iframe width="400" height="315" src="https://www.youtube.com/embed/CWhTCAwBrtU" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="420" height="280" src="https://www.youtube.com/embed/u9QJYweVceY" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="420" height="280" src="https://www.youtube.com/embed/MCH8QrJ3pSI" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="420" height="280" src="https://www.youtube.com/embed/CWhTCAwBrtU" frameborder="0" allowfullscreen></iframe>
 
                 </ul> 
+                 
         
                 
             </div>
@@ -305,6 +324,8 @@
 
         </div>
      </section>
+
+
 
 
 
