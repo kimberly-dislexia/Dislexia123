@@ -17,6 +17,10 @@
             text-align: center;
             margin-top: 20px;
         }
+        #contenedor3 {
+            text-align: center;
+            margin-top: 20px;
+        }
 
         .letra {
             display: inline-block;
@@ -36,6 +40,15 @@
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .letra3 {
+            display: inline-block;
+            font-size: 24px;
+            cursor: pointer;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
         #resultado {
             margin-top: 10px;
@@ -43,6 +56,10 @@
         #resultado2 {
             margin-top: 10px;
         }
+        #resultado3 {
+            margin-top: 10px;
+        }
+
 
         #reiniciar {
             margin-top: 20px;
@@ -64,6 +81,17 @@
             border-radius: 5px;
             border: none;
         }
+        #reiniciar3 {
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+
     </style>
 </head>
 <body>
@@ -187,6 +215,63 @@
     }
   
 </script>
+
+
+<!--................................PALABRA 3 DISLEXIA...............................................-->
+
+
+<h1>Palabra 3</h1>
+<div id="contenedor3">
+    <div class="letra3" onclick="seleccionarLetra3('I', 3)" id="I3">I</div>
+    <div class="letra3" onclick="seleccionarLetra3('D', 3)" id="D3">D</div>
+    <div class="letra3" onclick="seleccionarLetra3('S', 3)" id="S3">S</div>
+    <div class="letra3" onclick="seleccionarLetra3('E', 3)" id="E3">E</div>
+    <div class="letra3" onclick="seleccionarLetra3('L', 3)" id="L3">L</div>
+    <div class="letra3" onclick="seleccionarLetra3('I', 4)" id="I4">I</div>
+    <div class="letra3" onclick="seleccionarLetra3('A', 3)" id="A3">A</div>
+    <div class="letra3" onclick="seleccionarLetra3('X', 3)" id="X3">X</div>
+</div>
+
+<div id="resultado3">
+    <p>Palabra Formada: <span id="palabraFormada3"></span></p>
+    <p id="mensaje3"></p>
+</div>
+
+<script>
+    let palabraPropuesta3 = "DISLEXIA";
+    let letrasDisponibles3 = ['D', 'I', 'S','L', 'E', 'X','I','A'];
+    let letrasSeleccionadas3 = [];
+    let palabraFormada3 = "";
+
+    function seleccionarLetra3(letra3, seccion3) {
+        if (letrasDisponibles3.includes(letra3)) {
+            letrasSeleccionadas3.push(letra3);
+            actualizarPalabra3();
+            document.getElementById(letra3 + seccion3).style.display = "none";
+
+            let index = letrasDisponibles3.indexOf(letra3);
+            if (index !== -1) {
+            letrasDisponibles3.splice(index, 1);
+        }
+        
+            if (palabraFormada3 === palabraPropuesta3) {
+                document.getElementById("mensaje3").innerText = "¡Bien hecho!";
+            } else if (letrasDisponibles3.length === 0) {
+                document.getElementById("mensaje3").innerText = "Inténtalo una vez más";
+            }
+        } else {
+            document.getElementById("mensaje3").innerText = "Inténtalo una vez más";
+        }
+    }
+    function actualizarPalabra3() {
+        palabraFormada3 = letrasSeleccionadas3.join('');
+        document.getElementById("palabraFormada3").innerText = palabraFormada3;
+    }
+  
+</script>
+
+
+
 
 <!--................................REINICIAR...............................................-->
 <button id="reiniciar" onclick="reiniciarPagina()">Reiniciar Juego</button>
