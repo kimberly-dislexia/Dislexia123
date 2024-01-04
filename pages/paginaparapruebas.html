@@ -114,13 +114,15 @@
             document.getElementById(letra + seccion).style.display = "none";
             letrasDisponibles = letrasDisponibles.filter(item => item !== letra);
 
-            if (palabraFormada === palabraPropuesta) {
-                document.getElementById("mensaje").innerText = "¡Bien hecho!";
-            } else if (letrasDisponibles.length === 0) {
-                document.getElementById("mensaje").innerText = "Inténtalo una vez más";
+            if (letrasDisponibles.length === 0) {
+                if (palabraFormada === palabraPropuesta) {
+                    document.getElementById(mensajeId).innerText = "¡Bien hecho!";
+                } else {
+                    document.getElementById(mensajeId).innerText = "Inténtalo una vez más";
+                }
             }
         } else {
-            document.getElementById("mensaje").innerText = "Inténtalo una vez más";
+            document.getElementById(mensajeId).innerText = "Inténtalo una vez más";
         }
     }
 
