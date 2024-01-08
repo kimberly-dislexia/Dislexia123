@@ -20,7 +20,7 @@
             color: #000000;
             text-align: right;
             padding: 0.5em;
-            transition: background-color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Agrega una transición suave al cambio de color de fondo */
              /* Añade posición fija y fija la barra en la parte superior */
             position: fixed;
             top: 0;
@@ -379,7 +379,7 @@
             const navbar = document.getElementById("navbar");
     
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                navbar.style.backgroundColor = "#08080859"; // Cambia el color al hacer scroll hacia abajo
+                navbar.style.backgroundColor = "#ffffff70"; // Cambia el color al hacer scroll hacia abajo
                 document.body.classList.add("with-navbar");
             } else {
                 navbar.style.backgroundColor = "white"; // Restaura el color inicial
