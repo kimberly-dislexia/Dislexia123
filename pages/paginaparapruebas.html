@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -165,6 +165,76 @@
 
         palabraFormada = letrasSeleccionadas.join('');
         document.getElementById(palabraFormadaId).innerText = palabraFormada;
+    }
+</script>
+
+</body>
+</html> -->
+
+
+
+<!-- Barra de navegacion cambia de color -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación con Cambio de Color</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilo inicial de la barra de navegación */
+        .navbar {
+            background-color: transparent;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Añade un margen al cuerpo para evitar que se solapen los contenidos */
+        body.with-navbar {
+            margin-top: 80px;
+        }
+
+        /* Contenido de la página */
+        .content {
+            padding: 20px;
+            height: 1200px; /* Para simular contenido y permitir el scroll */
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+    <h2>Barra de Navegación</h2>
+</div>
+
+<div class="content">
+    <!-- Contenido de la página -->
+</div>
+
+<script>
+    // Añade la clase al hacer scroll
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+        const navbar = document.getElementById("navbar");
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            navbar.style.backgroundColor = "#333"; // Cambia el color al hacer scroll hacia abajo
+            document.body.classList.add("with-navbar");
+        } else {
+            navbar.style.backgroundColor = "transparent"; // Restaura el color inicial
+            document.body.classList.remove("with-navbar");
+        }
     }
 </script>
 
